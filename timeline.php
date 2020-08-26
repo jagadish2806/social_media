@@ -1,9 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-
- 
- <meta charset="utf-8">
+	<meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
 
@@ -12,23 +10,14 @@
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
-  
-
-
-  <link rel="stylesheet" href="sample.css">
- 
-
-	<title>Home page</title>
+	<title></title>
 </head>
-
 <body>
 	<?php include 'navbar.php';?>
 
 </body>
-
-
-
 </html>
+
 <?php
 $connect=mysql_connect("localhost","root","");
 if($connect)
@@ -40,7 +29,9 @@ else
   echo "not connected</br>";
 }
 mysql_select_db("sample",$connect);
-$news_feed=mysql_query("select * from news_feed",$connect);
+$Email=$Email=$_SESSION['mail'];
+
+$news_feed=mysql_query("select * from news_feed where Email='$Email'",$connect);
 $rows_count=mysql_num_rows($news_feed);
 for($i=0;$i<$rows_count;$i++)
 {
@@ -80,7 +71,3 @@ echo "</br></br><div class='container'>
 }
 
 ?>
-
-
-
-

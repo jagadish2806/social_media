@@ -10,11 +10,17 @@ else
 {
   echo "not connected</br>";
 }
+
 mysql_select_db("sample",$connect);
+
 $file = $_FILES["file"]["name"];
 $split_image=explode(".",$file);
 $text=$_POST["Comment"];
 $ab="select * from news_feed";
+
+
+
+
 $pavan=mysql_query($ab,$connect);
 
 $rows_count=mysql_num_rows($pavan)+1;
@@ -33,7 +39,6 @@ if($result)
     echo "upload sucess";
   }
   else{echo "failed to upload";} 
-  // echo "<img src='../images/$file' style='width:160px; height:250px;'/>";
 }
 else
 {

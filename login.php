@@ -12,14 +12,13 @@
 
 
 
-  <link rel="stylesheet" href="sample.css">
+  <link rel="stylesheet" href="login.css">
 
   <title>Login page</title>
 <script type="text/javascript">
     function validate(form1){  
       var UserName=document.form1.UserName.value;  
       var Password=document.form1.Password.value;  
-        
       var k=0;
       if (UserName==null || UserName=="")
       {  
@@ -51,7 +50,7 @@
                 }
                 else{
                     document.getElementById('incorrect').innerHTML="";
-                    window.location="upload.php";
+                    window.location="homepage_validation.php";
                 }
             }
         });
@@ -70,20 +69,20 @@
 </script> 
 
 </head>
-<body>
-  <nav class="navbar navbar-expand-lg navbar-light bg-success">
-   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-    <span class="navbar-toggler-icon"></span>
-  </button>
+<body >
 
-  <div class="collapse navbar-collapse" id="navbarSupportedContent">
-    <ul class="navbar-nav mr-auto">
-      <li class="nav-item ">
+<nav class="navbar navbar-expand-lg navbar-light bg-primary fixed-top">
         <a class="nav-link" href="#" style="color: white;">Home</a>
-      </li>    
-      <li class="nav-item ">
+         <a class="nav-link" href="timeline.php" style="color: white;">Timeline</a>
         <a class="nav-link" href="#" style="color: white;">Upload</a>
-      </li>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        
+    <div class="collapse navbar-collapse" id="navbarResponsive">
+      <ul class="navbar-nav ml-auto">
+    
       <li class="nav-item">
         <a class="nav-link" href="#" style="color: white;">Sign In/sign Up</a>
       </li>
@@ -91,38 +90,30 @@
     
   </div>
 </nav>
-    <div class="container">
-
-    
-      <div class="row">
-        <div class="col-sm-4">
-        </div>
-          <div class="col-sm-4 signin">
-            <ul class="nav nav-tabs">
+<div class="main">
+        <ul class="nav nav-tabs" >
               <li class="nav-item">
                </li>
               <li class="nav-item">
-                <a class="nav-link active" href="login.php">Sign In</a>
+                <a class="nav-link active loginnav" href="login.php">Sign In</a>
               </li>
               <li>
-                <a class="nav-link" href="registration.php">Sign Up</a>
+                <a class="nav-link loginnav" href="registration.php">Sign Up</a>
               </li>
               </ul>
-            <form name="form1" method="post" >
+            
+            <form name="form1" class="form1" method="post" >
               <div class="form-group">  
-                <label for="UserName">UserName</label>
-                <input type="UserName" class="form-control" name="UserName" id="UserName" placeholder="UserName"><span id="v_UserName" style="color: red;"></span>
+             <input type="UserName" class="form-control UserName" name="UserName" id="UserName" placeholder="UserName"><span id="v_UserName" style="color: red;"></span>
               </div>
               <div class="form-group">  
-                <label for="Password">Password</label>
-                <input type="Password" class="form-control" name="Password" id="Password" placeholder="Password"><span id="v_Password" style="color: red;"></span>
+                <input type="Password" class="form-control Password" name="Password" id="Password" placeholder="Password"><span id="v_Password" style="color: red;"></span>
               </div>
               <span style="color:red;" id="incorrect"></span>
-              <button type="button" class="btn btn-outline-danger" onclick="return validate(this)">Login</button>
+              <button type="submit" class="btn btn-outline-primary button" onclick="return validate(this)">Login</button>
               </form>
-               </div>
-        
-      </div>
-  </div>
+    </div>
+
+  
 </body>
 </html>

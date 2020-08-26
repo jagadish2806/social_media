@@ -12,7 +12,7 @@
 
 
 
-  <link rel="stylesheet" href="registration.css">
+  <link rel="stylesheet" href="index.css">
 
  <script type="text/javascript">
      function validate(form2)
@@ -114,6 +114,7 @@
       {
       document.getElementById('v_Phone').innerHTML="";
       }  
+      // return false;
 
       if(k==1)
       {
@@ -132,7 +133,7 @@
 <body>
 <nav class="navbar navbar-expand-lg navbar-light bg-primary fixed-top">
         <a class="nav-link" href="#" style="color: white;">Home</a>
-          <a class="nav-link" href="timeline.php" style="color: white;">Timeline</a>
+ 
         <a class="nav-link" href="#" style="color: white;">Upload</a>
 
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
@@ -152,39 +153,52 @@
   </div>
 </nav>
 <div class="main">
+  <!-- <div class="container">
 
-            
+      <div class="row">
+         <div class="col-sm-4">
+        </div>
+          <div class="col-sm-4 signup"> -->
               <ul class="nav nav-tabs">
               <li class="nav-item">
-                <a class="nav-link signupnav" href="login.php">Sign In</a>
+                <a class="nav-link " href="login.php">Sign In</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link active signupnav" href="registration.php">Sign Up</a>
+                <a class="nav-link active" href="registration.php">Sign Up</a>
               </li>
             </ul> 
 
-              <form name="form2" class="form2" method="post" action="registration_validation.php">
+              <form name="form2" class="form1" method="post" action="registration_validation.php">
               <div class="form-group">  
-                <input type="FirstName" class="Password" name="FirstName" id="FirstName" placeholder="FirstName"><span id="v_First" style="color: red;"></span>
+<!--                 <label for="FirstName">FirstName</label> -->
+                <input type="FirstName" class="form-control Password" name="FirstName" id="FirstName" placeholder="FirstName"><span id="v_First" style="color: red;"></span>
               </div>
               <div class="form-group">  
-                <input type="SecoundName" class="Password" name="SecoundName" id="SecoundName" placeholder="SecoundName"><span id="v_Secound" style="color: red;"></span>
+<!--                 <label for="SecoundName">SecoundName</label> -->
+                <input type="SecoundName" class="form-control Password" name="SecoundName" id="SecoundName" placeholder="SecoundName"><span id="v_Secound" style="color: red;"></span>
               </div>
               <div class="form-group">  
-                <input type="Email" class="Password" name="Email" id="Email" placeholder="Email"><span id="v_Email" style="color: red;"></span>
+<!--                 <label for="Email">Email</label> -->
+                <input type="Email" class="form-control Password" name="Email" id="Email" placeholder="Email"><span id="v_Email" style="color: red;"></span>
               </div>
               <div class="form-group">  
-                <input type="PhoneNumber" class="Password" name="PhoneNumber" id="PhoneNumber" placeholder="PhoneNumber"><span id="v_Phone" style="color: red;"></span>
+<!--                 <label for="PhoneNumber">PhoneNumber</label> -->
+                <input type="PhoneNumber" class="form-control Password" name="PhoneNumber" id="PhoneNumber" placeholder="PhoneNumber"><span id="v_Phone" style="color: red;"></span>
               </div>
               <div class="form-group">  
-                <input type="Password" class="Password" name="Password" id="Password" placeholder="Password"><span id="v_Password" style="color: red;"></span>
+<!--                 <label for="Password">Password</label> -->
+                <input type="Password" class="form-control Password" name="Password" id="Password" placeholder="Password"><span id="v_Password" style="color: red;"></span>
               </div>
               <div class="form-group">  
-                <input type="ConfirmPassword" class="Password" name="ConfirmPassword" id="ConfirmPassword" placeholder="ConfirmPassword"><span id="v_Confirm" style="color: red;"></span>
+<!--                 <label for="ConfirmPassword">ConfirmPassword</label> -->
+                <input type="ConfirmPassword" class="form-control Password" name="ConfirmPassword" id="ConfirmPassword" placeholder="ConfirmPassword"><span id="v_Confirm" style="color: red;"></span>
               </div>
               <button type="Submit" class="btn btn-outline-primary button" onclick="return validate(this)">Submit</button>
               </form>
-
+<!-- 
+          </div>
+        </div>
+      </div> -->
   </div>
 </body>
 </html>
