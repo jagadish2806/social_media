@@ -14,7 +14,7 @@
 
   <link rel="stylesheet" href="login.css">
 
-  <title>Login page</title>
+  <title>Login</title>
 <script type="text/javascript">
     function validate(form1){  
       var UserName=document.form1.UserName.value;  
@@ -74,7 +74,7 @@
 <nav class="navbar navbar-expand-lg navbar-light bg-primary fixed-top">
         <a class="nav-link" href="#" style="color: white;">Home</a>
          <a class="nav-link" href="timeline.php" style="color: white;">Timeline</a>
-        <a class="nav-link" href="#" style="color: white;">Upload</a>
+<!--         <a class="nav-link" href="#" style="color: white;">Upload</a> -->
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
         </button>

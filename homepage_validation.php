@@ -16,24 +16,36 @@
 
 
   <link rel="stylesheet" href="sample.css">
+    <link rel="stylesheet" href="homepage.css">
  
 
-	<title>Home page</title>
+	<title>Home</title>
 </head>
 
 <body>
 	<?php include 'navbar.php';?>
 
+  <div class="main">
+
+            <form name="form3" class="form3" method="post" action="upload_validation.php" enctype="multipart/form-data">
+            <div class="form-group">
+              <input type="file" class="form-control-file choose" name="file" id="file" required>
+            </div>
+            <div class="form-group">  
+                <input type="Comment" class="form-control comment" name="Comment" id="Comment" placeholder="Comment" required>
+              </div>
+              <button type="submit" class="btn btn-outline-primary button">Submit</button>
+            </form>
+  
+  </div>
 </body>
-
-
-
 </html>
+
 <?php
 $connect=mysql_connect("localhost","root","");
 if($connect)
 {
-  echo "</br>";
+  echo "";
 }
 else
 {
@@ -53,7 +65,7 @@ for($i=0;$i<$rows_count;$i++)
   $text=$row['text'];
   $time=$row['time'];
  
-echo "</br></br><div class='container'>
+echo "<div class='container'>
          <div class='row'>
 <div class='card' style='width:1200px; height:550px;'>
   <div class='card-header text-white   bg-info'>
