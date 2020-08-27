@@ -46,7 +46,7 @@ for($i=0;$i<$rows_count;$i++)
  
 echo "</br></br><div class='container'>
          <div class='row'>
-<div class='card' style='width:1200px; height:550px;'>
+<div class='card' style='width:1200px; height:480px;'>
   <div class='card-header text-white   bg-info'>
                  <div class='row'>
                    <div class='col-sm-3'>
@@ -59,10 +59,9 @@ echo "</br></br><div class='container'>
               </div>
 
   <div class='card-body'>
-    <h5 class='card-title'><p>Comment: $text</p>
-</h5>
+   
      <center><img src='images/$img' style='width:400px; height:350px; border:2px solid black; '/></center>
-
+      <h5 class='card-title'><p>Comment: $text</p></h5>
   </div>
 </div>
 </div>

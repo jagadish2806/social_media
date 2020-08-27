@@ -19,6 +19,7 @@
     function validate(form1){  
       var UserName=document.form1.UserName.value;  
       var Password=document.form1.Password.value;  
+        
       var k=0;
       if (UserName==null || UserName=="")
       {  
@@ -38,7 +39,6 @@
       {
       document.getElementById('v_Password').innerHTML="";
       } 
-
               $.ajax({
                 type: "POST",
                 url: "loginauth.php",
@@ -58,12 +58,10 @@
       if(k==1)
       {
         return false;
-
       }
       else
       {
         return true;
-
       }
     }  
 </script> 
@@ -110,10 +108,11 @@
                 <input type="Password" class="form-control Password" name="Password" id="Password" placeholder="Password"><span id="v_Password" style="color: red;"></span>
               </div>
               <span style="color:red;" id="incorrect"></span>
-              <button type="submit" class="btn btn-outline-primary button" onclick="return validate(this)">Login</button>
+              <button type="button" class="btn btn-outline-primary button" onclick="return validate(this)">Login</button>
               </form>
     </div>
 
   
 </body>
 </html>
+
