@@ -13,6 +13,11 @@
 
 
   <link rel="stylesheet" href="registration.css">
+  <style type="text/css">
+  body {
+  background-color: #808080;
+  }
+</style>
 
  <script type="text/javascript">
      function validate(form2)
@@ -131,27 +136,7 @@
 
 </head>
 <body>
-<nav class="navbar navbar-expand-lg navbar-light bg-primary fixed-top">
-        <a class="nav-link" href="#" style="color: white;">Home</a>
-          <a class="nav-link" href="timeline.php" style="color: white;">Timeline</a>
-<!--         <a class="nav-link" href="#" style="color: white;">Upload</a> -->
 
-    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
-          <span class="navbar-toggler-icon"></span>
-        </button>
-
-        
-    <div class="collapse navbar-collapse" id="navbarResponsive">
-      <ul class="navbar-nav ml-auto">
-
-    
-      <li class="nav-item">
-        <a class="nav-link" href="login.php" style="color: white;">Sign In/sign Up</a>
-      </li>
-    </ul>
-    
-  </div>
-</nav>
 <div class="main">
 
             

@@ -43,10 +43,11 @@ for($i=0;$i<$rows_count;$i++)
   $firstname=$sample_table['FirstName'];
   $text=$row['text'];
   $time=$row['time'];
- 
+   $postid=$row['postid'];
+
 echo "</br></br><div class='container'>
          <div class='row'>
-<div class='card' style='width:1200px; height:480px;'>
+<div class='card' style='width:1200px; height:510px;'>
   <div class='card-header text-white   bg-info'>
                  <div class='row'>
                    <div class='col-sm-3'>
@@ -59,6 +60,7 @@ echo "</br></br><div class='container'>
               </div>
 
   <div class='card-body'>
+      <h4 class='card-title'><p>$postid</p></h4>
    
      <center><img src='images/$img' style='width:400px; height:350px; border:2px solid black; '/></center>
       <h5 class='card-title'><p>Comment: $text</p></h5>

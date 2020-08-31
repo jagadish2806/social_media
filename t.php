@@ -24,7 +24,7 @@
     <link rel="stylesheet" href="homepage.css">
  
 
-	<title>Home</title>
+  <title>Home</title>
 <style>
 .fa-thumbs-up {
   background-color: DodgerBlue;
@@ -69,25 +69,7 @@
                 success: function(responseText) {
             }
         });
-
- }
-
-  function countClicks1(x)
-    {
-   
-       var dislike_counts=parseInt(document.getElementById('dislikes'+x).innerHTML)+1;
-    document.getElementById('dislikes'+x).innerHTML=dislike_counts;
-   document.getElementById("showCounts1"+x).innerHTML = dislike_counts;
-
-
-     $.ajax({
-                type: "POST",
-                url: "te_v.php",
-                data: ({a:dislike_counts,b:x}),
-                dataType: "html",
-                success: function(responseText) {
-            }
-        });
+      
 
  }
    
@@ -96,7 +78,7 @@
 </head>
 
 <body>
-	<?php include 'navbar.php';?>
+  <?php include 'navbar.php';?>
 
   <div class="main">
 
@@ -167,7 +149,7 @@ echo "<div class='container'>
 
        <p id='showCounts$postid'></p>
 
-       <button onclick='countClicks1(`$postid`)' ><i class='fa fa-thumbs-down'><span id='dislikes$postid'>0</span></i></button>
+       <button onclick='countClicks(`$postid`)' ><i class='fa fa-thumbs-down'><span id='dislikes$postid'>0</span></i></button>
 
        <p id='showCounts1$postid'></p>
 
